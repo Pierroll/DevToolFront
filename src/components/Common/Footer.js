@@ -1,9 +1,10 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
-            <p>&copy; 2025 DevTools. Todos los derechos reservados.</p>
+        <footer className="footer">
+            <p>© {new Date().getFullYear()} DevToolboX. Todos los derechos reservados. 🚀</p>
         </footer>
     );
 };

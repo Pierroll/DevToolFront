@@ -1,3 +1,39 @@
+/* Reset básico para prevenir desbordamientos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  overflow-x: hidden; /* Previene scroll horizontal */
+  width: 100%;
+}
+
 .App {
-  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; /* Previene scroll horizontal */
+  width: 100%;
+}
+
+.background-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #090F13;
+  overflow-x: hidden; /* Previene scroll horizontal */
+}
+
+
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
