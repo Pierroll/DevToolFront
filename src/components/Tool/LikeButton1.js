@@ -16,7 +16,7 @@ const LikeButton = ({ toolId }) => {
     useEffect(() => {
         const fetchLikes = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/likes/${toolId}?userId=${userId}`);
+                const response = await fetch(`https://devtoolbackend.onrender.com/api/likes/${toolId}?userId=${userId}`);
                 const data = await response.json();
                 setLikeCount(data.likes);
                 setLiked(data.likedByUser);
