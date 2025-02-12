@@ -1,4 +1,4 @@
-/* Reset básico */
+/* ✅ Estilos Generales */
 * {
   margin: 0;
   padding: 0;
@@ -12,28 +12,38 @@ body {
 
 /* ✅ Navbar fijo */
 .navbar {
-  position: fixed;           /* ✅ Mantiene el navbar en la parte superior */
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(8px); /* ✅ Efecto de desenfoque para el fondo */
-  background-color: rgba(5, 2, 15, 0.7); /* ✅ Fondo semitransparente */
-  z-index: 1000;              /* ✅ Asegura que esté por encima del contenido */
+  backdrop-filter: blur(8px);
+  background-color: rgba(5, 2, 15, 0.7);
+  z-index: 1000;
   transition: background-color 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ✅ Línea sutil inferior */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ✅ Estilos para el logo */
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #facc15;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-/* Navegación */
+.logo-img {
+  width: 170px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ Enlaces de navegación */
 .nav-links {
   list-style: none;
   display: flex;
@@ -46,32 +56,41 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Hover para enlaces inactivos */
+/* ✅ Hover para enlaces */
 .nav-item:hover {
   background-color: #27272a;
   color: #e1dddf;
 }
 
-/* Estilo para la sección activa */
+/* ✅ Estilo para el enlace activo */
 .nav-item.active {
   background-color: #3d041b;
   color: white;
   border-radius: 8px;
 }
-.logo {
-  display: flex;
-  align-items: center;
-}
 
-.logo-img {
-  width: 170px;    /* Ajusta el tamaño del logo */
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;  /* Efecto al pasar el mouse */
-}
+/* ✅ Responsive para móviles */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 0.8rem;
+  }
 
-.logo-img:hover {
-  transform: scale(1.1);  /* Efecto de zoom al pasar el mouse */
+  .nav-item {
+    font-size: 14px;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 120px; /* Reduce el tamaño del logo */
+  }
 }
