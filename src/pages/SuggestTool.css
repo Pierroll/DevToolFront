@@ -1,0 +1,81 @@
+/* ✅ Contenedor principal */
+.suggest-tool {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    color: #E1DDDF;
+}
+
+/* ✅ Diseño responsive */
+@media (min-width: 768px) {
+    .suggest-tool {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .form-section,
+    .list-section {
+        width: 50%;
+    }
+}
+
+/* ✅ Estilo del formulario */
+.suggestion-form {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.suggestion-form h2 {
+    font-size: 1.5rem;
+    color: #facc15;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.suggestion-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+    color: #E1DDDF;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+    padding: 10px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: #E1DDDF;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.suggestion-form input:focus,
+.suggestion-form textarea:focus {
+    border-color: #facc15;
+}
+
+/* ✅ Botón de envío */
+.suggestion-form button {
+    background-color: #3d041b;
+    color: #E1DDDF;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.suggestion-form button:hover {
+    background-color: #27272a;
+    transform: scale(1.05);
+}
+
+

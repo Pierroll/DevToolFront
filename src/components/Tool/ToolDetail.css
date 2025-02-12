@@ -1,0 +1,172 @@
+/* ✅ Fondo semitransparente con desenfoque */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(5, 2, 15, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* ✅ Caja principal más grande y bien centrada */
+.modal-content {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #E1DDDF;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ✅ Botón de cerrar con icono SVG más grande */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* ✅ Icono SVG de cerrar */
+.close-icon {
+    width: 28px;
+    height: 28px;
+    stroke: #facc15;
+}
+
+/* ✅ Imagen de la herramienta */
+.tool-image {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #facc15;
+}
+
+/* ✅ Botón de enlace más centrado */
+.visit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: #3d041b;
+    color: #E1DDDF;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin: 12px auto; /* ✅ Centrado */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+}
+
+.visit-btn:hover {
+    background-color: #27272a;
+}
+
+/* ✅ Ícono de enlace */
+.link-icon {
+    width: 18px;
+    height: 18px;
+    fill: #facc15;
+}
+/* ✅ Contenedor de tutoriales */
+.tutorials {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ✅ Título de tutoriales con icono */
+.tutorials h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #facc15;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ✅ Icono de la sección de tutoriales */
+.tutorials-icon {
+    width: 24px;  /* Ajusta el tamaño */
+    height: 24px; /* Ajusta el tamaño */
+    fill: #facc15; /* Cambia el color si lo necesitas */
+}
+
+
+/* ✅ Lista de tutoriales */
+.tutorials ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 8px;
+}
+
+/* ✅ Botones de tutoriales */
+.tutorial-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #3d041b;
+
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.tutorial-btn:hover {
+    background-color: #27272a;
+}
+
+/* ✅ Ícono de cada tutorial */
+.tutorial-icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #facc15;
+    stroke-width: 1.5;
+}
+
+/* ✅ Enlaces a tutoriales */
+.tutorials a {
+    color: #facc15;
+    text-decoration: none;
+    font-weight: bold;
+}
+

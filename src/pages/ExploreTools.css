@@ -1,0 +1,119 @@
+.explore-tools {
+    padding: 20px;
+    text-align: center;
+    color: #E1DDDF;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.explore-tools h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #facc15;
+}
+
+/* 🔍 Barra de búsqueda */
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* ✅ Más ancha */
+    margin: 0 auto 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px 10px 45px; /* ✅ Espacio para el ícono a la izquierda */
+    border: 1px solid #E1DDDF;  /* ✅ Línea de color #E1DDDF */
+    border-radius: 8px;
+    background-color: transparent;
+    color: #E1DDDF;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    left: 10px;  /* ✅ Ícono alineado a la izquierda */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;  /* ✅ Para que el ícono no bloquee el input */
+}
+.search-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #E1DDDF;
+}
+
+/* ✅ Filtros */
+.tool-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tool-filter button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #334155;  /* ✅ Borde para los filtros */
+    border-radius: 8px;
+    color: #E1DDDF;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 120px;  /* ✅ Botones más anchos */
+    text-align: center;
+}
+
+.tool-filter button:hover,
+.tool-filter button.active {
+    background-color: #334155;  /* ✅ Cambio de color al pasar el mouse o activar */
+    color: #facc15;
+}
+
+/* ✅ Grid de 4 columnas */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.no-tools {
+    grid-column: span 4;
+    color: #facc15;
+    font-weight: bold;
+}
+
+/* 🔄 Responsive Design */
+@media (max-width: 992px) {
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 columnas en pantallas medianas */
+    }
+
+    .search-bar {
+        max-width: 90%; /* ✅ Barra más ancha en pantallas medianas */
+    }
+}
+
+@media (max-width: 576px) {
+    .tool-grid {
+        grid-template-columns: 1fr; /* ✅ 1 columna en pantallas pequeñas */
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    .tool-filter button {
+        min-width: 100%; /* ✅ Botones de filtro ocupan todo el ancho en móvil */
+    }
+}
+@media (max-width: 480px) {
+    .filter-button {
+        flex: 1 1 100%;  /* Ocupará el ancho completo en móviles */
+        text-align: center;
+    }
+}

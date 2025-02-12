@@ -1,40 +1,37 @@
 .hero {
-    background: linear-gradient(135deg, #3b82f6, #6366f1);
-    color: white;
     text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #E1DDDF;
+    font-family: "Varela Round", sans-serif;
+    margin-top: 5px;  /* ✅ Aumenta el espacio entre el navbar y el Hero */
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto y el ícono */
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.highlight {
-    color: #facc15; /* Amarillo para resaltar */
+    margin-bottom: 1rem;
+    color: #E1DDDF;
 }
 
 .explore-btn {
-    background-color: #111827;
-    color: white;
-    padding: 0.8rem 2rem;
+    background-color: #3d041b;
+    color: #E1DDDF;
     border: none;
+    padding: 10px 20px;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .explore-btn:hover {
-    background-color: #facc15;
-    color: #111827;
+    background-color: #27272a;
     transform: scale(1.05);
 }

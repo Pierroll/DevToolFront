@@ -1,16 +1,15 @@
 import React from 'react';
+import './ExploreTools.css'; // Asegúrate de importar el CSS
 
 const ToolFilter = ({ categories, selectedCategory, onFilter }) => {
     return (
-        <div className="flex gap-2 mb-4">
+        <div className="tool-filter">
             {categories.map((category) => (
                 <button 
                     key={category.id_category}
                     onClick={() => onFilter(category.name)}
-                    className={`px-4 py-2 rounded ${
-                        selectedCategory === category.name 
-                        ? "bg-blue-700 text-white" // ✅ Si está seleccionada, cambia el color
-                        : "bg-gray-300"
+                    className={`filter-button ${
+                        selectedCategory === category.name ? "active" : ""
                     }`}
                 >
                     {category.name}

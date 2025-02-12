@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import SuggestionForm from '../components/Suggestion/SuggestionForm';
 import SuggestionList from '../components/Suggestion/SuggestionList';
+import './SuggestTool.css'; // Importar el CSS para estilos personalizados
 
 const SuggestTool = () => {
     const [newSuggestion, setNewSuggestion] = useState(null);
 
     return (
-        <div className="flex flex-col md:flex-row gap-6 p-6">
-            <div className="md:w-1/2">
-                <SuggestionForm onNewSuggestion={setNewSuggestion} /> {/* ✅ Pasar la función */}
+        <div className="suggest-tool">
+            <div className="form-section">
+                <SuggestionForm onNewSuggestion={setNewSuggestion} />
             </div>
-            <div className="md:w-1/2">
-                <SuggestionList newSuggestion={newSuggestion} /> {/* ✅ Recibir nueva sugerencia */}
+            <div className="list-section">
+                <SuggestionList newSuggestion={newSuggestion} />
             </div>
         </div>
     );

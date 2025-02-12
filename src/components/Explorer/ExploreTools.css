@@ -1,0 +1,32 @@
+/* ✅ Estilos del contenedor de filtros */
+.tool-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Para que sea responsive */
+}
+
+/* ✅ Estilos de los botones de filtro */
+.filter-button {
+    padding: 10px 20px;
+    background-color: #3D041B;   /* Fondo base */
+    color: #E1DDDF;              /* Color de texto */
+    border: 1px solid #334155;   /* Borde */
+    border-radius: 8px;          /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* ✅ Efecto hover */
+.filter-button:hover {
+    background-color: #334155;   /* Cambia el color al pasar el mouse */
+    color: #facc15;
+    transform: scale(1.05);      /* Pequeño efecto de zoom */
+}
+
+/* ✅ Estilo para la categoría seleccionada */
+.filter-button.active {
+    background-color: #facc15;   /* Fondo más claro para destacar */
+    color: #05020f;              /* Texto oscuro para contraste */
+    border: 1px solid #facc15;
+}

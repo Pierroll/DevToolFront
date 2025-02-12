@@ -1,0 +1,28 @@
+.favorite-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+    position: absolute; /* ✅ Para ubicarlo en la esquina superior derecha */
+    top: 8px;
+    right: 8px;
+}
+
+.favorite-button:hover {
+    transform: scale(1.1); /* ✅ Efecto de zoom al pasar el mouse */
+}
+
+.star-icon {
+    width: 24px;
+    height: 24px;
+    fill: #e1dddf; /* ✅ Color por defecto */
+    transition: fill 0.3s ease;
+}
+
+.favorite-button.favorited .star-icon {
+    fill: #facc15; /* ✅ Cambia el color cuando está marcado como favorito */
+}

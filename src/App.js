@@ -7,20 +7,28 @@ import ExploreTools from './pages/ExploreTools';
 import SuggestTool from './pages/SuggestTool';
 import FavoriteTools from './pages/FavoriteTools';
 import { ToolProvider } from './context/ToolContext';
+import './App.css';
 
 function App() {
   return (
     <ToolProvider>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/explore" element={<ExploreTools />} />
-        <Route path="/suggest" element={<SuggestTool />} />
-        <Route path="/favorites" element={<FavoriteTools />} />
-      </Routes>
-      <Footer />
-    </Router>
+      <Router>
+        <div className="app-background">
+          <div className="gradient-circle gradient-left"></div>
+          <div className="gradient-circle gradient-right"></div>
+
+          <div className="content"> {/* ✅ Contenedor principal */}
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/explore" element={<ExploreTools />} />
+              <Route path="/suggest" element={<SuggestTool />} />
+              <Route path="/favorites" element={<FavoriteTools />} />
+            </Routes>
+            <Footer /> {/* ✅ Footer al final */}
+          </div>
+        </div>
+      </Router>
     </ToolProvider>
   );
 }

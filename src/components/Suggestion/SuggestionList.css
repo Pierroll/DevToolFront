@@ -1,0 +1,112 @@
+/* ✅ Estilo general del contenedor */
+.suggestion-list {
+
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    color: #E1DDDF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ✅ Título principal */
+.suggestion-list h2 {
+    font-size: 1.5rem;
+    color: #facc15;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ✅ Estilo para cuando no hay sugerencias */
+.no-suggestions {
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* ✅ Lista de tarjetas */
+.suggestion-cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ✅ Estilo de las tarjetas */
+.suggestion-card {
+    background-color: #3D041B;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.suggestion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Encabezado de cada tarjeta */
+.suggestion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.suggestion-header h3 {
+    font-size: 1.2rem;
+    color: #facc15;
+    margin: 0;
+}
+
+.suggestion-header span {
+    background-color: #334155;
+    color: #E1DDDF;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+/* ✅ Enlace para visitar */
+.visit-link {
+    display: inline-block;
+    margin: 5px 0;
+    color: #38bdf8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.visit-link:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Comentarios */
+.comment {
+    color: #E2E8F0;
+    margin: 5px 0;
+}
+
+/* ✅ Fecha */
+.date {
+    display: block;
+    text-align: right;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 600px) {
+    .suggestion-card {
+        padding: 12px;
+    }
+
+    .suggestion-header h3 {
+        font-size: 1rem;
+    }
+}

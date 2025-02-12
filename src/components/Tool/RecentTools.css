@@ -1,0 +1,42 @@
+.recent-tools {
+  padding: 20px;
+  text-align: center;
+  color: #E1DDDF;
+}
+
+.recent-tools h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #facc15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon-svg svg {
+  width: 30px;
+  height: 30px;
+  fill: #facc15 !important;  /* ✅ Asegura el color amarillo */
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .tool-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-grid {
+      grid-template-columns: 1fr;
+  }
+}

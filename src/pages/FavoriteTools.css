@@ -1,0 +1,79 @@
+/* ✅ Estilo del contenedor */
+.favorite-tools {
+    padding: 20px;
+    text-align: center;
+    color: #E1DDDF;
+}
+
+/* ✅ Estilo del título */
+.favorite-tools h1 {
+    font-size: 1.5rem;
+    color: #facc15;
+    margin-bottom: 20px;
+}
+
+/* ✅ Grid de herramientas favoritas */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ✅ Contenedor cuando no hay favoritos */
+.no-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    gap: 15px;
+}
+
+/* ✅ Icono SVG interactivo */
+.add-favorite-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.add-favorite-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ✅ Texto de mensaje */
+.no-favorites p {
+    font-size: 1.2rem;
+    color: #E1DDDF;
+}
+
+/* ✅ Botón para explorar herramientas */
+.explore-btn {
+    background-color: #3d041b;
+    color: #E1DDDF;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.explore-btn:hover {
+    background-color: #27272a;
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}

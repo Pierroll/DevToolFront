@@ -1,10 +1,13 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { getFavoritesByUser } from '../services/api';
 import ToolCard from '../components/Tool/ToolCard';
+import './FavoriteTools.css'; // ✅ Asegúrate de importar los estilos CSS
 
 const FavoriteTools = () => {
     const userId = localStorage.getItem('userId');
     const [favorites, setFavorites] = useState([]);
+    const navigate = useNavigate();
 
     const fetchFavorites = useCallback(async () => {
         const data = await getFavoritesByUser(userId);
@@ -34,17 +37,33 @@ const FavoriteTools = () => {
     }, [fetchFavorites]);
 
     return (
-        <div className="p-4">
-            <h1 className="text-2xl font-bold mb-4">⭐ Tus Herramientas Favoritas</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {favorites.length > 0 ? (
-                    favorites.map((tool) => (
+        <div className="favorite-tools">
+            <h1>Tus Herramientas Favoritas</h1>
+
+            {favorites.length > 0 ? (
+                <div className="tool-grid">
+                    {favorites.map((tool) => (
                         <ToolCard key={tool.id_tool} tool={tool} />
-                    ))
-                ) : (
-                    <p>No tienes herramientas favoritas todavía.</p>
-                )}
-            </div>
+                    ))}
+                </div>
+            ) : (
+                <div className="no-favorites">
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 896 1024"
+    width="80"  /* 🔹 Reducción del tamaño */
+    height="80"
+    fill="none"
+    stroke="#facc15"  /* 🔹 Mantiene el color amarillo */
+    strokeWidth="20"   /* 🔹 Hace las líneas más delgadas */
+    onClick={() => navigate('/explore')}
+    className="add-favorite-icon"
+>
+    <path d="M512 320H384v128H256v128h128v128h128V576h128V448H512V320zM832 64H64C0 64 0 128 0 128v768c0 0 0 64 64 64 0 0 704 0 768 0s64-64 64-64V128C896 128 896 64 832 64zM768 800c0 32-32 32-32 32H160c0 0-32 0-32-32V224c0-32 32-32 32-32h576c0 0 32 0 32 32C768 224 768 773.25 768 800z"/>
+</svg>
+                    <p>Añade herramientas a favoritos</p>
+                </div>
+            )}
         </div>
     );
 };

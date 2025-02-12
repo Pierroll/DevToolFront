@@ -1,10 +1,29 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  color: white;
+}
+
+/* ✅ Navbar fijo */
 .navbar {
-  background-color: #1e293b;
+  position: fixed;           /* ✅ Mantiene el navbar en la parte superior */
+  top: 0;
+  width: 100%;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  backdrop-filter: blur(8px); /* ✅ Efecto de desenfoque para el fondo */
+  background-color: rgba(5, 2, 15, 0.7); /* ✅ Fondo semitransparente */
+  z-index: 1000;              /* ✅ Asegura que esté por encima del contenido */
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ✅ Línea sutil inferior */
 }
 
 .logo {
@@ -14,19 +33,45 @@
   text-decoration: none;
 }
 
+/* Navegación */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-.nav-links a {
-  color: white;
+.nav-item {
+  color: #e1dddf;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #facc15;
+/* Hover para enlaces inactivos */
+.nav-item:hover {
+  background-color: #27272a;
+  color: #e1dddf;
+}
+
+/* Estilo para la sección activa */
+.nav-item.active {
+  background-color: #3d041b;
+  color: white;
+  border-radius: 8px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 170px;    /* Ajusta el tamaño del logo */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;  /* Efecto al pasar el mouse */
+}
+
+.logo-img:hover {
+  transform: scale(1.1);  /* Efecto de zoom al pasar el mouse */
 }
