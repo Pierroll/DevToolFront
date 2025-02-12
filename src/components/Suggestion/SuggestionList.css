@@ -1,6 +1,5 @@
 /* ✅ Estilo general del contenedor */
 .suggestion-list {
-
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -17,6 +16,17 @@
     color: #facc15;
     text-align: center;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ✅ Estilos del icono de sugerencias */
+.suggestion-icon {
+    width: 24px;
+    height: 24px;
+    fill: #facc15;
 }
 
 /* ✅ Estilo para cuando no hay sugerencias */
